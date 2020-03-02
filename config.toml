@@ -1,6 +1,6 @@
 baseurl = "https://chiefhustler.com/"
 languageCode = "en-us"
-title = "A Hugo website"
+title = "Karim Lahrichi's website"
 theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
@@ -20,7 +20,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "https://twitter.com/rstudio"
 
 [params]
-    description = "A website built through Hugo and blogdown."
+    description = "Karim Lahrichi's website, built with blogdown."
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
@@ -35,8 +35,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     favicon = "favicon.ico"
 
     [params.logo]
-    url = "logo.png"
-    width = 50
-    height = 50
+    url = "logo_ch2.png"
+    width = 417
+    height = 94
     alt = "Logo"
 

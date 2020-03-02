@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on A Hugo website</title>
+    <title>python on Karim Lahrichi&#39;s website</title>
     <link>/categories/python/</link>
-    <description>Recent content in python on A Hugo website</description>
+    <description>Recent content in python on Karim Lahrichi&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
@@ -18,8 +18,7 @@
       
       <guid>/2020/02/27/create-a-python-package-and-publish-it-on-github/</guid>
       <description>If you have written some piece of code that you find yourself using over and over again, why not turn it into a package and have it hosted on github ?
-Here are some of the few benefits:
- when your code is public, you will be shy about it and more likely to clean it up and comment it properly other people might find your code useful you can install your own package on your machine, and import it the same way you do any other standard package !</description>
+Here are some of the few benefits: - when your code is public, you will be shy about it and more likely to clean it up and comment it properly - other people might find your code useful - you can install your own package on your machine, and import it the same way you do any other standard package !</description>
     </item>
     
   </channel>

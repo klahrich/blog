@@ -40,7 +40,7 @@ Note that `__init__.py` should be just an empty file. The purpose of it is to le
 
 The `setup.py` tells `pip` what to do when installing a package. A minimal `setup.py` file would look something like this:
 
-```{python}
+```{python, eval=FALSE, python.reticulate=FALSE}
 from setuptools import setup, find_packages
 
 setup(

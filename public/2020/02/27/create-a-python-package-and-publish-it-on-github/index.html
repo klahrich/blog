@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.63.1" />
 
 
-<title>Create a python package and publish it on github - A Hugo website</title>
-<meta property="og:title" content="Create a python package and publish it on github - A Hugo website">
+<title>Create a python package and publish it on github - Karim Lahrichi&#39;s website</title>
+<meta property="og:title" content="Create a python package and publish it on github - Karim Lahrichi&#39;s website">
 
 
   <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -38,9 +38,9 @@
       <header class="header">
         <nav class="nav">
   <a href="/" class="nav-logo">
-    <img src="/images/logo.png"
-         width="50"
-         height="50"
+    <img src="/images/logo_ch2.png"
+         width="417"
+         height="94"
          alt="Logo">
   </a>
 
@@ -72,16 +72,15 @@
     
 
     <div class="article-content">
-      <p>If you have written some piece of code that you find yourself using over and over again, why not turn it into a package and have it hosted on github ?</p>
-<p>Here are some of the few benefits:</p>
-<ul>
-<li>when your code is public, you will be shy about it and more likely to clean it up and comment it properly</li>
-<li>other people might find your code useful</li>
-<li>you can install your own package on your machine, and <code>import</code> it the same way you do any other standard package !</li>
-</ul>
-<p>And really, packaging python code is actually SUPER easy &ndash; despite what the scattered online documentation would have you believe.</p>
-<p>Here&rsquo;s what you need to do:</p>
-<h2 id="1-folder-structure">1. FOLDER STRUCTURE</h2>
+      
+
+
+<p>If you have written some piece of code that you find yourself using over and over again, why not turn it into a package and have it hosted on github ?</p>
+<p>Here are some of the few benefits: - when your code is public, you will be shy about it and more likely to clean it up and comment it properly - other people might find your code useful - you can install your own package on your machine, and <code>import</code> it the same way you do any other standard package !</p>
+<p>And really, packaging python code is actually SUPER easy – despite what the scattered online documentation would have you believe.</p>
+<p>Here’s what you need to do:</p>
+<div id="folder-structure" class="section level2">
+<h2>1. FOLDER STRUCTURE</h2>
 <p>Your code should be structured as such:</p>
 <pre><code>project_root_folder
 |
@@ -90,31 +89,35 @@
 |_package_name
   |_ __init__.py
   |_python_module1.py
-  |_python_module2.py
-</code></pre><p>Note that <code>__init__.py</code> should be just an empty file. The purpose of it is to let the Python interpreter know that there are some modules that can be imported inside this directory.</p>
-<h2 id="2-setuppy">2. SETUP.PY</h2>
+  |_python_module2.py</code></pre>
+<p>Note that <code>__init__.py</code> should be just an empty file. The purpose of it is to let the Python interpreter know that there are some modules that can be imported inside this directory.</p>
+</div>
+<div id="setup.py" class="section level2">
+<h2>2. SETUP.PY</h2>
 <p>The <code>setup.py</code> tells <code>pip</code> what to do when installing a package. A minimal <code>setup.py</code> file would look something like this:</p>
-<pre><code class="language-{python}" data-lang="{python}">from setuptools import setup, find_packages
+<pre class="python"><code>from setuptools import setup, find_packages
 
 setup(
-    name='{your_package_name}',
-    url='https://github.com/{your_username}/{repo}',
-    author='{Firstname} {Lastname}',
-    author_email='{email}',
+    name=&#39;{your_package_name}&#39;,
+    url=&#39;https://github.com/{your_username}/{repo}&#39;,
+    author=&#39;{Firstname} {Lastname}&#39;,
+    author_email=&#39;{email}&#39;,
     
     packages=find_packages(),
     
-    install_requires=['{required_module1}', '{required_module2'}],
-    version='0.1',
-    license='MIT',
-    description='{short_description}',
-)
-</code></pre><p>At this stage, you could already install your package locally by running <code>python setup.py install</code>.</p>
-<h2 id="3-publish--install-from-github">3. Publish &amp; install from github</h2>
-<p>Simply push your code (i.e. everything under your <code>package_root_folder</code>) to a new repo on github, and&hellip;that&rsquo;s it. Your package is now installable by anyone, with the following command:
-<code>pip install git+https://github.com/{your_username}/{your_package_name}.git</code></p>
+    install_requires=[&#39;{required_module1}&#39;, &#39;{required_module2&#39;}],
+    version=&#39;0.1&#39;,
+    license=&#39;MIT&#39;,
+    description=&#39;{short_description}&#39;,
+)</code></pre>
+<p>At this stage, you could already install your package locally by running <code>python setup.py install</code>.</p>
+</div>
+<div id="publish-install-from-github" class="section level2">
+<h2>3. Publish &amp; install from github</h2>
+<p>Simply push your code (i.e. everything under your <code>package_root_folder</code>) to a new repo on github, and…that’s it. Your package is now installable by anyone, with the following command: <code>pip install git+https://github.com/{your_username}/{your_package_name}.git</code></p>
 <p>Make sure to add a nice README.md explaining what the package does, and youre good to go!</p>
-<p>If you want to see a concrete simple example, I published one recently for cloud functions I often use but can&rsquo;t remember: <a href="https://github.com/klahrich/easycloud">easycloud</a>.</p>
+<p>If you want to see a concrete simple example, I published one recently for cloud functions I often use but can’t remember: <a href="https://github.com/klahrich/easycloud">easycloud</a>.</p>
+</div>
 
     </div>
   </article>
