@@ -1,0 +1,70 @@
+---
+title: Create a python package and publish it on github
+author: Karim Lahrichi
+date: '2020-02-27'
+slug: create-a-python-package-and-publish-it-on-github
+categories:
+  - python
+tags: []
+---
+
+If you have written some piece of code that you find yourself using over and over again, why not turn it into a package and have it hosted on github ?
+
+Here are some of the few benefits:
+- when your code is public, you will be shy about it and more likely to clean it up and comment it properly
+- other people might find your code useful
+- you can install your own package on your machine, and `import` it the same way you do any other standard package !
+
+And really, packaging python code is actually SUPER easy -- despite what the scattered online documentation would have you believe.
+
+Here's what you need to do:
+
+## 1. FOLDER STRUCTURE
+
+Your code should be structured as such:
+
+```
+project_root_folder
+|
+|_setup.py
+|
+|_package_name
+  |_ __init__.py
+  |_python_module1.py
+  |_python_module2.py
+```
+
+Note that `__init__.py` should be just an empty file. The purpose of it is to let the Python interpreter know that there are some modules that can be imported inside this directory.
+
+## 2. SETUP.PY
+
+The `setup.py` tells `pip` what to do when installing a package. A minimal `setup.py` file would look something like this:
+
+```{python}
+from setuptools import setup, find_packages
+
+setup(
+    name='{your_package_name}',
+    url='https://github.com/{your_username}/{repo}',
+    author='{Firstname} {Lastname}',
+    author_email='{email}',
+    
+    packages=find_packages(),
+    
+    install_requires=['{required_module1}', '{required_module2'}],
+    version='0.1',
+    license='MIT',
+    description='{short_description}',
+)
+```
+
+At this stage, you could already install your package locally by running `python setup.py install`.
+
+## 3. Publish & install from github
+
+Simply push your code (i.e. everything under your `package_root_folder`) to a new repo on github, and...that's it. Your package is now installable by anyone, with the following command:
+`pip install git+https://github.com/{your_username}/{your_package_name}.git`
+
+Make sure to add a nice README.md explaining what the package does, and youre good to go!
+
+If you want to see a concrete simple example, I published one recently for cloud functions I often use but can't remember: [easycloud](https://github.com/klahrich/easycloud).
